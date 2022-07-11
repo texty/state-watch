@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=PT+Mono&display=swap" rel="stylesheet">  
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/underscore@1.13.4/underscore-umd-min.js'></script>
+</head>
+<style> /* set the CSS */
+
+    svg text {
+       font-family: 'Fira Mono', monospace; 
+      /* font-family: 'PT Mono', monospace; */
+    }
+
+    #my_dataviz {
+      max-width: 1500px;
+    }
+
+    .node.level1 {
+      display: none;
+    }
+    
+    .node circle {
+      fill: red;  
+      stroke: #ccc;    
+      stroke-width: 1px;
+    }
+    
+    .node text { font: 13px 'Fira Mono'; }
+    
+    .node--internal text {
+      text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+    }
+    
+    .link {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 0.8px;
+    }
+    
+    </style>
+<body>
+  <div id="my_dataviz">
+    <svg width="100%" height="100%" viewBox='0 0 1500 2500'></svg>
+  </div>
+  
+
+  <script>
+
+    // set the dimensions and margins of the diagram
+    var margin = {top: 20, right: 90, bottom: 30, left: 90},
+        width = 1500 - margin.left - margin.right,
+        height = 2500 - margin.top - margin.bottom;
+ 
+
+    d3.csv("data_test2.csv").then(function(data){  
+      data.forEach(function(d, i){ d.index = i })
+      var namesList = []
+      var flatData = [];
+      var myList = []
+
+      let ob =  {'name': "root", "parent": null, "colname": "level1" }           
+      myList.push(ob);
+
+
+      data.forEach(function(d){
+        if(d.level2 != ''){
+          let ob2 = {"name": d.level2, "parent": "root", "colname": "level2", "index": d.index }
+          myList.push(ob2);
+        } 
+        
+        if(d.level3 != '' && d.level2 != ""){
+          let ob3 = {"name": d.level3, "parent": d.level2, "colname": "level3", "index": d.index }
+          myList.push(ob3);
+        } else if(d.level3 != '' && d.level2 === ""){
+          let ob3 = {"name": d.level3, "parent": "root", "colname": "level3", "index": d.index }
+          myList.push(ob3);
+        } 
+        
+        if(d.level4 != '' && d.level3 != ""){
+          let ob4 = {"name": d.level4, "parent": d.level3, "colname": "level4", "index": d.index }
+          myList.push(ob4);
+        } else if(d.level4 != '' && d.level3 === "" && d.level2 != ""){
+          let ob4 = {"name": d.level4, "parent": d.level2, "colname": "level4", "index": d.index }
+          myList.push(ob4);
+        } else if(d.level4 != '' && d.level3 === "" && d.level2 === ""){
+          let ob4 = {"name": d.level4, "parent": "root", "colname": "level4", "index": d.index }
+          myList.push(ob4);
+        } 
+        
+        if(d.level5 != '' && d.level4 != ""){
+          let ob5 = {"name": d.level5, "parent": d.level4, "colname": "level5", "index": d.index }
+          myList.push(ob5);
+        } else if(d.level5 != '' && d.level4 === "" && d.level3 != ""){
+          let ob5 = {"name": d.level5, "parent": d.level3, "colname": "level5", "index": d.index }
+          myList.push(ob5);
+        } else if(d.level5 != '' && d.level4 === "" && d.level3 === "" && d.level2 != ''){
+          let ob5 = {"name": d.level5, "parent": d.level2, "colname": "level5", "index": d.index }
+          myList.push(ob5);
+        } else if(d.level5 != '' && d.level4 === "" && d.level3 === "" && d.level2 === ''){
+          let ob5 = {"name": d.level5, "parent": "root", "colname": "level5", "index": d.index }
+          myList.push(ob5);
+        }
+                  
+        let ob6 = {"name": d.level6, "parent": d.level5, "colname": "level6", "index": d.index }
+        myList.push(ob6);
+      })
+
+      var destArray = _.uniq(myList, function(x){
+        return x.name;
+      });
+          
+      var root = d3.stratify()
+        .id(function(d) { return d.name; })
+        .parentId(function(d) { return d.parent; })
+        (destArray);
+
+      console.log(root) 
+
+
+      var svg = d3.select("svg")
+        g = svg.append("g").attr("transform", "translate(40,0)");
+
+      var tree = d3.cluster().size([height, width - 160]);  
+         
+      tree(root);
+
+      var link = g
+        .selectAll(".link")
+        .data(root.descendants().slice(1))
+        .enter()
+        .append("path")
+        .attr("class", function(d) { return "link "+ "row-"+d.data.index })
+        .attr("d", function(d) {
+            return "M" + (width - d.y) + "," + d.x
+                + "C" + (width - d.parent.y - 50) + "," + d.x
+                + " " + (width - d.parent.y - 50) + "," + d.parent.x // 50 and 150 are coordinates of inflexion, play with it to change links shape
+                + " " + (width - d.parent.y) + "," + d.parent.x;
+        })
+        .style("opacity", function(d){
+          return d.parent.data.name === "root" ? 0 : 1
+        })
+        .on("mousemove", function(){
+    
+        })
+
+
+    var node = g
+      .selectAll(".node")
+      .data(root.descendants())
+      .enter()
+      .append("g")
+      .attr("class", function (d) {        
+        return "node" + (d.children ? " node--internal " : " node--leaf ") + d.data.colname;
+      })
+      .attr("transform", function(d) {
+        return "translate(" + (width - d.y) + "," + d.x + ")"
+      })
+
+    node.append("circle").attr("r", 3);
+
+    node
+      .append("text")
+      .attr("dy", '0.6em')
+      .attr("x", d => (d.children ? 10 : -10))
+      .attr("y", 5)
+      .attr("text-anchor", d => (d.children ? "start" : "end"))
+      .text(function (d) {
+        return d.id.toUpperCase()
+        //.slice(0, 20)
+      })
+      .call(wrap, 200);      
+  })
+
+
+        
+function wrap(text, width) {
+    text.each(function () {
+        var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.2, // ems
+            x = text.attr("x"),
+            y = text.attr("y"),
+            dy = 0,
+            startDy = -(lineNumber * (lineHeight / 2)) 
+            tspan = text.text(null)
+                        .append("tspan")
+                        .attr("x", x)                        
+                        .attr("dy", (d, i) => startDy + lineHeight * i + "em")
+        while (word = words.pop()) {
+            line.push(word);           
+            tspan.text(line.join(" "));            
+            if (tspan.node().getComputedTextLength() > width) {
+                line.pop();
+               
+                tspan.text(line.join(" "));
+                line = [word];
+                tspan = text.append("tspan")
+                            .attr("x", x)                            
+                            .attr("dy", lineHeight + dy + "em")
+                            .text(line);
+            }
+        }
+    });
+}
+
+function type(d) {
+  d.value = +d.value;
+  return d;
+}
+        
+    </script>
+    
+</body>
+</html>
