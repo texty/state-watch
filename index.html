@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=PT+Mono&display=swap" rel="stylesheet">  
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/underscore@1.13.4/underscore-umd-min.js'></script>
+
+
+
 </head>
 <style> /* set the CSS */
 
@@ -26,6 +27,10 @@
     .node.level1 {
       display: none;
     }
+
+    .node {
+      cursor: pointer;
+    }
     
     .node circle {
       fill: red;  
@@ -33,7 +38,9 @@
       stroke-width: 1px;
     }
     
-    .node text { font: 13px 'Fira Mono'; }
+    .node text { 
+      font: 13px 'Fira Mono'; 
+    }
     
     .node--internal text {
       text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
@@ -44,6 +51,25 @@
       stroke: #ccc;
       stroke-width: 0.8px;
     }
+
+    .tippy-content {
+      width: 180px;
+      font-size: 14px;
+      padding: 20px;
+      font-family: 'Fira Mono'; 
+      background-color: white;
+      border:1px solid #333;
+      
+    }
+
+    .tippy-tooltip {
+      background-color: white;
+      color: #555;
+    }
+
+    .tippy-backdrop {
+      background-color: white;
+    }
     
     </style>
 <body>
@@ -51,6 +77,13 @@
     <svg width="100%" height="100%" viewBox='0 0 1500 2500'></svg>
   </div>
   
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/underscore@1.13.4/underscore-umd-min.js'></script>
+
+  <script src="lib/jquery-2.1.4.min.js"></script>
+  <script src="https://unpkg.com/popper.js@1"></script>
+  <script src="https://unpkg.com/tippy.js@4"></script>
 
   <script>
 
@@ -66,50 +99,50 @@
       var flatData = [];
       var myList = []
 
-      let ob =  {'name': "root", "parent": null, "colname": "level1" }           
+      let ob =  {'name': "root", "parent": null, "colname": "level1", "head_name": "", "head_pic": "" }           
       myList.push(ob);
 
 
       data.forEach(function(d){
         if(d.level2 != ''){
-          let ob2 = {"name": d.level2, "parent": "root", "colname": "level2", "index": d.index }
+          let ob2 = {"name": d.level2, "parent": "root", "colname": "level2", "index": d.index, "head_name": d.level2_3, "head_pic":d.level2_4 }
           myList.push(ob2);
         } 
         
         if(d.level3 != '' && d.level2 != ""){
-          let ob3 = {"name": d.level3, "parent": d.level2, "colname": "level3", "index": d.index }
+          let ob3 = {"name": d.level3, "parent": d.level2, "colname": "level3", "index": d.index, "head_name": d.level3_3,"head_pic":d.level3_4 }
           myList.push(ob3);
         } else if(d.level3 != '' && d.level2 === ""){
-          let ob3 = {"name": d.level3, "parent": "root", "colname": "level3", "index": d.index }
+          let ob3 = {"name": d.level3, "parent": "root", "colname": "level3", "index": d.index, "head_name": d.level3_3, "head_pic":d.level3_4 }
           myList.push(ob3);
         } 
         
         if(d.level4 != '' && d.level3 != ""){
-          let ob4 = {"name": d.level4, "parent": d.level3, "colname": "level4", "index": d.index }
+          let ob4 = {"name": d.level4, "parent": d.level3, "colname": "level4", "index": d.index, "head_name": d.level4_3, "head_pic":d.level4_4 }
           myList.push(ob4);
         } else if(d.level4 != '' && d.level3 === "" && d.level2 != ""){
-          let ob4 = {"name": d.level4, "parent": d.level2, "colname": "level4", "index": d.index }
+          let ob4 = {"name": d.level4, "parent": d.level2, "colname": "level4", "index": d.index, "head_name": d.level4_3, "head_pic":d.level4_4 }
           myList.push(ob4);
         } else if(d.level4 != '' && d.level3 === "" && d.level2 === ""){
-          let ob4 = {"name": d.level4, "parent": "root", "colname": "level4", "index": d.index }
+          let ob4 = {"name": d.level4, "parent": "root", "colname": "level4", "index": d.index, "head_name": d.level4_3, "head_pic":d.level4_4 }
           myList.push(ob4);
         } 
         
         if(d.level5 != '' && d.level4 != ""){
-          let ob5 = {"name": d.level5, "parent": d.level4, "colname": "level5", "index": d.index }
+          let ob5 = {"name": d.level5, "parent": d.level4, "colname": "level5", "index": d.index, "head_name": d.level5_3, "head_pic":d.level5_4 }
           myList.push(ob5);
         } else if(d.level5 != '' && d.level4 === "" && d.level3 != ""){
-          let ob5 = {"name": d.level5, "parent": d.level3, "colname": "level5", "index": d.index }
+          let ob5 = {"name": d.level5, "parent": d.level3, "colname": "level5", "index": d.index, "head_name": d.level5_3, "head_pic":d.level5_4 }
           myList.push(ob5);
         } else if(d.level5 != '' && d.level4 === "" && d.level3 === "" && d.level2 != ''){
-          let ob5 = {"name": d.level5, "parent": d.level2, "colname": "level5", "index": d.index }
+          let ob5 = {"name": d.level5, "parent": d.level2, "colname": "level5", "index": d.index, "head_name": d.level5_3, "head_pic":d.level5_4 }
           myList.push(ob5);
         } else if(d.level5 != '' && d.level4 === "" && d.level3 === "" && d.level2 === ''){
-          let ob5 = {"name": d.level5, "parent": "root", "colname": "level5", "index": d.index }
+          let ob5 = {"name": d.level5, "parent": "root", "colname": "level5", "index": d.index, "head_name": d.level5_3, "head_pic":d.level5_4 }
           myList.push(ob5);
         }
                   
-        let ob6 = {"name": d.level6, "parent": d.level5, "colname": "level6", "index": d.index }
+        let ob6 = {"name": d.level6, "parent": d.level5, "colname": "level6", "index": d.index, "head_name": '', "head_pic":d.level6_4 }
         myList.push(ob6);
       })
 
@@ -132,6 +165,16 @@
          
       tree(root);
 
+      //root.children.forEach(collapse);
+
+      function collapse(d) {
+        if(d.children) {
+          d._children = d.children
+          d._children.forEach(collapse)
+          d.children = null
+        }
+      }
+
       var link = g
         .selectAll(".link")
         .data(root.descendants().slice(1))
@@ -147,9 +190,7 @@
         .style("opacity", function(d){
           return d.parent.data.name === "root" ? 0 : 1
         })
-        .on("mousemove", function(){
-    
-        })
+        
 
 
     var node = g
@@ -158,13 +199,21 @@
       .enter()
       .append("g")
       .attr("class", function (d) {        
-        return "node" + (d.children ? " node--internal " : " node--leaf ") + d.data.colname;
-      })
+        return "node" + (d.children ? " node--internal" : " node--leaf") + " "+ d.data.colname;
+      })    
       .attr("transform", function(d) {
         return "translate(" + (width - d.y) + "," + d.x + ")"
       })
+      .attr("data-tippy-content", function(d){ 
+        return d.data.head_name + "<br>"+
+      `<img src='directors/${d.data.head_pic}' style='width: 180px'/>`})
+      
+     
 
-    node.append("circle").attr("r", 3);
+    node.append("circle")
+    .attr("class", "tip")    
+    .attr("r", 6)
+    
 
     node
       .append("text")
@@ -176,7 +225,20 @@
         return d.id.toUpperCase()
         //.slice(0, 20)
       })
-      .call(wrap, 200);      
+      .call(wrap, 200); 
+      
+      
+      tippy('.node', {   
+            theme: 'light',         
+            animation: true,
+            arrow: false,   
+            animation: true,         
+            allowHTML: true,
+            placement: 'right',
+            //trigger: "mouseenter",
+            trigger: "click"
+               
+        });
   })
 
 
@@ -213,6 +275,8 @@ function wrap(text, width) {
         }
     });
 }
+
+
 
 function type(d) {
   d.value = +d.value;
