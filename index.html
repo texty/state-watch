@@ -101,7 +101,7 @@ svg g {
   <script>
 
     // set the dimensions and margins of the diagram
-    var margin = {top: 20, right: 90, bottom: 30, left: 90},
+    var margin = {top: 20, right: 90, bottom: 30, left: 100},
         width = 1500 - margin.left - margin.right,
         height = 2500 - margin.top - margin.bottom;
  
@@ -170,7 +170,7 @@ svg g {
 
 
       var svg = d3.select("svg")
-        g = svg.append("g").attr("transform", "translate(40,0)");
+        g = svg.append("g").attr("transform", "translate(60,0)");
 
       var tree = d3.cluster().size([height, width - 160]);  
          
