@@ -15,8 +15,16 @@
 </head>
 <style> /* set the CSS */
 
+body {
+  background-color: black;
+}
+
+svg g {
+  /* outline: #F15F23; */
+}
+
     svg text {
-       font-family: 'Fira Mono', monospace; 
+       font-family: 'Fira Mono', monospace;        
       /* font-family: 'PT Mono', monospace; */
     }
 
@@ -32,43 +40,48 @@
       cursor: pointer;
     }
     
-    .node circle {
-      fill: red;  
-      stroke: #ccc;    
-      stroke-width: 1px;
+    .node circle {             
+      stroke-width: 0;
     }
     
     .node text { 
       font: 13px 'Fira Mono'; 
     }
     
-    .node--internal text {
+  /*   .node--internal text {
       text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-    }
+    } */
     
     .link {
       fill: none;
-      stroke: #ccc;
+      stroke: #F15F23;
       stroke-width: 0.8px;
     }
 
     .tippy-content {
-      width: 180px;
+      width: 130px;
       font-size: 14px;
-      padding: 20px;
+      padding: 10px;
       font-family: 'Fira Mono'; 
       background-color: white;
-      border:1px solid #333;
-      
+      border:1px solid #333;      
+    }
+
+    @media(max-width: 800px){
+      .tippy-content {
+        width: 80px;
+        font-size: 7px;
+        padding: 2px;
+      }
     }
 
     .tippy-tooltip {
-      background-color: white;
+      background-color: black;
       color: #555;
     }
 
     .tippy-backdrop {
-      background-color: white;
+      background-color: transparent;
     }
     
     </style>
@@ -155,8 +168,6 @@
         .parentId(function(d) { return d.parent; })
         (destArray);
 
-      console.log(root) 
-
 
       var svg = d3.select("svg")
         g = svg.append("g").attr("transform", "translate(40,0)");
@@ -165,16 +176,9 @@
          
       tree(root);
 
-      //root.children.forEach(collapse);
+      console.log(root.descendants())
 
-      function collapse(d) {
-        if(d.children) {
-          d._children = d.children
-          d._children.forEach(collapse)
-          d.children = null
-        }
-      }
-
+   
       var link = g
         .selectAll(".link")
         .data(root.descendants().slice(1))
@@ -206,25 +210,41 @@
       })
       .attr("data-tippy-content", function(d){ 
         return d.data.head_name + "<br>"+
-      `<img src='directors/${d.data.head_pic}' style='width: 180px'/>`})
+      `<img src='directors/${d.data.head_pic}' style='width: 100%'/>`})
       
      
 
     node.append("circle")
-    .attr("class", "tip")    
-    .attr("r", 6)
+    .attr("class", function(d){ return d.data.colname + " tip"})
+    .attr("fill", function(d){ return d.data.colname === 'level6'? '#F15F23' : '#67423A'})    
+    .attr("r", function(d){ 
+      let radius = d.data.colname === 'level2' ? 50 :
+                  d.data.colname === 'level3' ? 25 : 
+                  d.data.colname === 'level4' ? 20 : 
+                  d.data.colname === 'level5' ? 15 : 
+                  d.data.colname === 'level6' ? 10 : 5
+      
+      return radius 
+    })
     
 
     node
       .append("text")
       .attr("dy", '0.6em')
-      .attr("x", d => (d.children ? 10 : -10))
+      .attr("x", function(d) {
+        let coeff = d.data.colname === 'level2' ? -11 :                 
+                    d.data.colname === 'level6' ? -10 : 15
+
+                  return 2 * coeff
+         //d.children ? 20 : -20 
+        })
       .attr("y", 5)
       .attr("text-anchor", d => (d.children ? "start" : "end"))
       .text(function (d) {
         return d.id.toUpperCase()
         //.slice(0, 20)
       })
+      .attr("fill", function(d){ return d.data.colname === 'level6'? '#F15F23' : '#CBCACC'})    
       .call(wrap, 200); 
       
       
