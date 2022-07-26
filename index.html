@@ -241,7 +241,7 @@ svg g {
       .attr("y", 5)
       .attr("text-anchor", d => (d.children ? "start" : "end"))
       .text(function (d) {
-        return d.id.toUpperCase()
+        return d.id
         //.slice(0, 20)
       })
       .attr("fill", function(d){ return d.data.colname === 'level6'? '#F15F23' : '#CBCACC'})    
