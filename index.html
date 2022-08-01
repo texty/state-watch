@@ -19,6 +19,10 @@ body {
   background-color: black;
 }
 
+.layout {
+  position: relative;
+}
+
 svg g {
   /* outline: #F15F23; */
 }
@@ -47,6 +51,10 @@ svg g {
     .node text { 
       font: 13px 'Fira Mono'; 
     }
+
+    .node {
+      outline: none;
+    }
     
   /*   .node--internal text {
       text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
@@ -62,7 +70,7 @@ svg g {
       width: 130px;
       font-size: 14px;
       padding: 10px;
-      font-family: 'Fira Mono'; 
+      font-family: sans-serif; 
       background-color: white;
       border:1px solid #333;      
     }
@@ -83,10 +91,36 @@ svg g {
     .tippy-backdrop {
       background-color: transparent;
     }
+
+    .switch-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #layout-one {
+      max-height: 80vh;
+      max-width: 1500px;
+      margin: auto;
+    }
+
+    #layout-two {
+      max-width: 1500px;
+      margin: 50px auto;     
+    }
     
     </style>
 <body>
-  <div id="my_dataviz">
+
+  <div class='switch-buttons'>
+    <button id='show-chart'>Графік</button>
+    <button id='show-tree'>Список</button>
+  </div>
+
+
+
+  <div id='layout-one' class='layout'></div>
+  <div id="layout-two" class='layout'>
     <svg width="100%" height="100%" viewBox='0 0 1500 2500'></svg>
   </div>
   
@@ -99,6 +133,64 @@ svg g {
   <script src="https://unpkg.com/tippy.js@4"></script>
 
   <script>
+
+d3.xml("svg/structure.svg").then(function (data) {
+        d3.select("#layout-one")
+                .node()
+                .append(data.documentElement);
+
+        d3.csv("layer_corresp.csv").then(function(data){
+
+          data.forEach(function(d){
+            d3.select("#"+d.selector)
+            .classed("node", true)
+            .attr("data-tippy-content", function(){
+              return d.name + "<br>"+ 
+                `</b><img src='directors/${d.img}' style='width: 100%'/>`+ '<br><b>'+
+                d.director + "</b>"
+               })
+               .on("click", function(d){
+              console.log(this);
+              d3.selectAll("circle").style("stroke", null);
+              d3.select(this).select('circle').style("stroke", "#FF5E00").style("stroke-width", "5px")
+            })
+            })
+           
+
+            tippy('.node', {   
+            theme: 'light',         
+            animation: true,
+            arrow: false,   
+            animation: true,         
+            allowHTML: true,
+            placement: 'right',
+            //trigger: "mouseenter",
+            trigger: "click"
+               
+        });
+
+
+          })
+
+          
+       
+
+        })
+
+      
+
+      d3.select("#show-tree").on("click", function(){
+          d3.select('#layout-two').style("display", "block");
+          d3.select('#layout-one').style("display", "none") 
+      });
+
+        
+      d3.select("#show-chart").on("click", function(d){
+          d3.select('#layout-two').style("display", "none");
+          d3.select('#layout-one').style("display", "block")
+        })   
+        
+      
 
     // set the dimensions and margins of the diagram
     var margin = {top: 20, right: 90, bottom: 30, left: 100},
@@ -169,7 +261,7 @@ svg g {
         (destArray);
 
 
-      var svg = d3.select("svg")
+      var svg = d3.select("#layout-two svg")
         g = svg.append("g").attr("transform", "translate(60,0)");
 
       var tree = d3.cluster().size([height, width - 160]);  
@@ -233,7 +325,7 @@ svg g {
       .attr("dy", '0.6em')
       .attr("x", function(d) {
         let coeff = d.data.colname === 'level2' ? -11 :                 
-                    d.data.colname === 'level6' ? -10 : 15
+                    d.data.colname === 'level6' ? -10 : 10
 
                   return 2 * coeff
          //d.children ? 20 : -20 
@@ -246,9 +338,13 @@ svg g {
       })
       .attr("fill", function(d){ return d.data.colname === 'level6'? '#F15F23' : '#CBCACC'})    
       .call(wrap, 200); 
+
       
-      
-      tippy('.node', {   
+      d3.select('#layout-two').style("display", "none");
+     
+
+
+   /*    tippy('.node', {   
             theme: 'light',         
             animation: true,
             arrow: false,   
@@ -258,27 +354,33 @@ svg g {
             //trigger: "mouseenter",
             trigger: "click"
                
-        });
+        }); */
+      
+      
+  
   })
 
-
+ 
         
-function wrap(text, width) {
+  function wrap(text, width) {
     text.each(function () {
+        var that = this;
         var text = d3.select(this),
             words = text.text().split(/\s+/).reverse(),
             word,
             line = [],
             lineNumber = 0,
             lineHeight = 1.2, // ems
-            x = text.attr("x"),
-            y = text.attr("y"),
+            x = text.attr("x")  ,      
+            y = text.attr("y")            
             dy = 0,
             startDy = -(lineNumber * (lineHeight / 2)) 
             tspan = text.text(null)
+                        .attr("x", x)
                         .append("tspan")
                         .attr("x", x)                        
-                        .attr("dy", (d, i) => startDy + lineHeight * i + "em")
+                        .attr("dy", (d, i) => startDy + lineHeight * i + "em");
+                                     
         while (word = words.pop()) {
             line.push(word);           
             tspan.text(line.join(" "));            
