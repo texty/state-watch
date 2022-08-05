@@ -7,29 +7,40 @@
     <title>Document</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=PT+Mono&display=swap" rel="stylesheet">  
-
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=PT+Mono&display=swap" rel="stylesheet">  
 </head>
-<style> /* set the CSS */
 
-body {
-  background-color: black;
-}
 
-.layout {
-  position: relative;
-}
+<style> 
 
-svg g {
-  /* outline: #F15F23; */
-}
+    body {
+      background-color: black;
+    }
+
+    .layout {
+      position: relative;
+    }
+
+    .switch-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #layout-one {
+      max-height: 80vh;
+      width: 100%;
+      margin: auto;
+    }
+
+    #layout-two {
+      max-width: 1500px;
+      margin: 50px auto;     
+    }
 
     svg text {
-       font-family: 'Fira Mono', monospace;        
-      /* font-family: 'PT Mono', monospace; */
+       font-family: 'Fira Mono', monospace;      
     }
 
     #my_dataviz {
@@ -42,6 +53,7 @@ svg g {
 
     .node {
       cursor: pointer;
+      outline: none;
     }
     
     .node circle {             
@@ -52,14 +64,6 @@ svg g {
       font: 13px 'Fira Mono'; 
     }
 
-    .node {
-      outline: none;
-    }
-    
-  /*   .node--internal text {
-      text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-    } */
-    
     .link {
       fill: none;
       stroke: #F15F23;
@@ -67,7 +71,7 @@ svg g {
     }
 
     .tippy-content {
-      width: 130px;
+      width: 180px;
       font-size: 14px;
       padding: 10px;
       font-family: sans-serif; 
@@ -92,28 +96,26 @@ svg g {
       background-color: transparent;
     }
 
-    .switch-buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+    button {
+      background-color: #343434;
+      padding: 8px 20px;      
+      border:  1px solid #F15F23;
+      text-transform: uppercase;
+      font-family: monospace;
+      color: white;
     }
 
-    #layout-one {
-      max-height: 80vh;
-      max-width: 1500px;
-      margin: auto;
+    button.clicked {
+      background-color: #F15F23;
     }
 
-    #layout-two {
-      max-width: 1500px;
-      margin: 50px auto;     
-    }
+  
     
-    </style>
+</style>
 <body>
-
   <div class='switch-buttons'>
-    <button id='show-chart'>Графік</button>
+    <button id='show-chart' class='clicked'>Графік</button>
     <button id='show-tree'>Список</button>
   </div>
 
@@ -149,56 +151,51 @@ d3.xml("svg/structure.svg").then(function (data) {
                 `</b><img src='directors/${d.img}' style='width: 100%'/>`+ '<br><b>'+
                 d.director + "</b>"
                })
-               .on("click", function(d){
-              console.log(this);
-              d3.selectAll("circle").style("stroke", null);
-              d3.select(this).select('circle').style("stroke", "#FF5E00").style("stroke-width", "5px")
-            })
+              .on("click", function(d){              
+                d3.selectAll("circle").style("stroke", null);
+                d3.select(this).select('circle').style("stroke", "#FF5E00").style("stroke-width", "5px")
+              })
             })
            
 
-            tippy('.node', {   
+          tippy('.node', {   
             theme: 'light',         
             animation: true,
             arrow: false,   
             animation: true,         
             allowHTML: true,
-            placement: 'right',
-            //trigger: "mouseenter",
-            trigger: "click"
-               
-        });
-
-
-          })
-
-          
-       
-
-        })
+            placement: 'top',           
+            trigger: "click"               
+          });
+       })
+     })
 
       
 
       d3.select("#show-tree").on("click", function(){
           d3.select('#layout-two').style("display", "block");
-          d3.select('#layout-one').style("display", "none") 
+          d3.select('#layout-one').style("display", "none");
+          d3.selectAll('button').classed('clicked', false);
+          d3.select(this).classed('clicked', true);
       });
 
         
       d3.select("#show-chart").on("click", function(d){
           d3.select('#layout-two').style("display", "none");
-          d3.select('#layout-one').style("display", "block")
+          d3.select('#layout-one').style("display", "block");
+          d3.selectAll('button').classed('clicked', false);
+          d3.select(this).classed('clicked', true);
         })   
         
       
 
     // set the dimensions and margins of the diagram
-    var margin = {top: 20, right: 90, bottom: 30, left: 100},
+    var margin = {top: 20, right: 90, bottom: 30, left: 150},
         width = 1500 - margin.left - margin.right,
         height = 2500 - margin.top - margin.bottom;
  
 
-    d3.csv("data_test2.csv").then(function(data){  
+    d3.csv("data_tree.csv").then(function(data){  
       data.forEach(function(d, i){ d.index = i })
       var namesList = []
       var flatData = [];
@@ -247,7 +244,7 @@ d3.xml("svg/structure.svg").then(function (data) {
           myList.push(ob5);
         }
                   
-        let ob6 = {"name": d.level6, "parent": d.level5, "colname": "level6", "index": d.index, "head_name": '', "head_pic":d.level6_4 }
+        let ob6 = {"name": d.level6, "parent": d.level5, "colname": "level6", "index": d.index, "head_name": d.level6, "head_pic":d.level6_4 }
         myList.push(ob6);
       })
 
@@ -303,6 +300,10 @@ d3.xml("svg/structure.svg").then(function (data) {
       .attr("data-tippy-content", function(d){ 
         return d.data.head_name + "<br>"+
       `<img src='directors/${d.data.head_pic}' style='width: 100%'/>`})
+      .on("click", function(d){              
+              d3.selectAll("circle").style("stroke", null);
+              d3.select(this).select('circle').style("stroke", "#FF5E00").style("stroke-width", "5px")
+      })
       
      
 
