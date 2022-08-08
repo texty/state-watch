@@ -136,7 +136,7 @@
 
   <script>
 
-d3.xml("svg/structure.svg").then(function (data) {
+  d3.xml("svg/structure.svg").then(function (data) {
         d3.select("#layout-one")
                 .node()
                 .append(data.documentElement);
@@ -185,11 +185,9 @@ d3.xml("svg/structure.svg").then(function (data) {
           d3.select('#layout-one').style("display", "block");
           d3.selectAll('button').classed('clicked', false);
           d3.select(this).classed('clicked', true);
-        })   
-        
+        })
       
 
-    // set the dimensions and margins of the diagram
     var margin = {top: 20, right: 90, bottom: 30, left: 150},
         width = 1500 - margin.left - margin.right,
         height = 2500 - margin.top - margin.bottom;
@@ -277,7 +275,7 @@ d3.xml("svg/structure.svg").then(function (data) {
         .attr("d", function(d) {
             return "M" + (width - d.y) + "," + d.x
                 + "C" + (width - d.parent.y - 50) + "," + d.x
-                + " " + (width - d.parent.y - 50) + "," + d.parent.x // 50 and 150 are coordinates of inflexion, play with it to change links shape
+                + " " + (width - d.parent.y - 50) + "," + d.parent.x 
                 + " " + (width - d.parent.y) + "," + d.parent.x;
         })
         .style("opacity", function(d){
@@ -327,38 +325,17 @@ d3.xml("svg/structure.svg").then(function (data) {
       .attr("x", function(d) {
         let coeff = d.data.colname === 'level2' ? -11 :                 
                     d.data.colname === 'level6' ? -10 : 10
-
                   return 2 * coeff
-         //d.children ? 20 : -20 
+       
         })
       .attr("y", 5)
       .attr("text-anchor", d => (d.children ? "start" : "end"))
       .text(function (d) {
         return d.id
-        //.slice(0, 20)
       })
       .attr("fill", function(d){ return d.data.colname === 'level6'? '#F15F23' : '#CBCACC'})    
-      .call(wrap, 200); 
-
-      
-      d3.select('#layout-two').style("display", "none");
-     
-
-
-   /*    tippy('.node', {   
-            theme: 'light',         
-            animation: true,
-            arrow: false,   
-            animation: true,         
-            allowHTML: true,
-            placement: 'right',
-            //trigger: "mouseenter",
-            trigger: "click"
-               
-        }); */
-      
-      
-  
+      .call(wrap, 200);       
+      d3.select('#layout-two').style("display", "none"); 
   })
 
  
