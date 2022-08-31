@@ -389,9 +389,9 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    showgrid="false"
-   inkscape:zoom="1.5262956"
-   inkscape:cx="936.25374"
-   inkscape:cy="427.50564"
+   inkscape:zoom="0.5"
+   inkscape:cx="520"
+   inkscape:cy="665"
    inkscape:window-width="1854"
    inkscape:window-height="1052"
    inkscape:window-x="66"
@@ -2274,7 +2274,7 @@
    id="rect845" /><text
    class="st0 st5 st7"
    id="text847"
-   x="1733.097"
+   x="1673.097"
    y="825.97791">Takhion reconnaissance UAV</text><rect
    x="1760.9"
    y="991.09998"
@@ -2334,7 +2334,8 @@
    id="text871"
    x="1515.4899"
    y="1101.0883">AFV GAZ-3344-20 &quot;Aleut&quot;</text><g
-   id="g881">
+   id="g881"
+   class="st0 st5 st7">
 		<rect
    x="1168.7"
    y="831"
@@ -2352,7 +2353,8 @@
      id="tspan875"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#ff5e00;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1">R-330BMV Borisoglebsk-2B </tspan></text>
 	</g><g
-   id="g891">
+   id="g891"
+   class="st0 st5 st7">
 		<rect
    x="1320.5"
    y="777.29999"
@@ -2384,7 +2386,8 @@
      class="st0 st5 st7"
      id="tspan895"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#ff5e00;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1">Aircrafts Su-34 </tspan></text><g
-   id="g911">
+   id="g911"
+   class="st0 st5 st7">
 		<rect
    x="1187.7"
    y="786.5"
