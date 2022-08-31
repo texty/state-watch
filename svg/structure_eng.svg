@@ -380,6 +380,12 @@
 	
 		
 		
+	
+		
+		
+	
+		
+		
 	</defs><sodipodi:namedview
    id="namedview1072"
    pagecolor="#ffffff"
@@ -389,9 +395,9 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    showgrid="false"
-   inkscape:zoom="0.5"
-   inkscape:cx="520"
-   inkscape:cy="665"
+   inkscape:zoom="1.4142136"
+   inkscape:cx="1421.9917"
+   inkscape:cy="889.18678"
    inkscape:window-width="1854"
    inkscape:window-height="1052"
    inkscape:window-x="66"
@@ -1965,7 +1971,7 @@
    x="959.1311"
    y="737.41064"
    class="st0 st5 st7"><tspan
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end"
+     style="text-align:end;text-anchor:end"
      sodipodi:role="line"
      x="959.1311"
      y="737.41064"
@@ -1973,7 +1979,7 @@
      sodipodi:role="line"
      x="959.1311"
      y="752.41064"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end"
+     style="text-align:end;text-anchor:end"
      id="tspan140108">Т-80UM2, T-80BVM </tspan><tspan
      sodipodi:role="line"
      id="tspan111476"
@@ -1990,11 +1996,9 @@
    id="text763"
    x="983.70374"
    y="836.8938"><tspan
-     sodipodi:role="line"
      id="tspan313012"
      x="983.70374"
      y="836.8938">R-149MA1 command</tspan><tspan
-     sodipodi:role="line"
      id="tspan313014"
      x="983.70374"
      y="851.8938">and staff vehicle </tspan></text><rect
@@ -2147,25 +2151,24 @@
    class="st3"
    width="197"
    height="9.8000002"
-   id="rect813" /><g
-   id="g6126"><circle
-     class="st0"
-     cx="153.89999"
-     cy="151.89999"
-     r="11.4"
-     id="circle23" /><text
-     class="st0 st5 st7"
-     id="text815"
+   id="rect813" /><circle
+   class="st0"
+   cx="153.89999"
+   cy="151.89999"
+   r="11.4"
+   id="circle23" /><text
+   class="st0 st5 st7"
+   id="text815"
+   x="92.162918"
+   y="114.68169"><tspan
+     sodipodi:role="line"
+     id="tspan483702"
      x="92.162918"
-     y="114.68169"><tspan
-       sodipodi:role="line"
-       id="tspan483702"
-       x="92.162918"
-       y="114.68169">Jammer And Deception </tspan><tspan
-       sodipodi:role="line"
-       id="tspan483704"
-       x="92.162918"
-       y="129.68169">System R-330ZH Zhitel</tspan></text></g><rect
+     y="114.68169">Jammer And Deception </tspan><tspan
+     sodipodi:role="line"
+     id="tspan483704"
+     x="92.162918"
+     y="129.68169">System R-330ZH Zhitel</tspan></text><rect
    x="408.60001"
    y="145.3"
    class="st3"
@@ -2333,44 +2336,36 @@
    class="st0 st5 st7"
    id="text871"
    x="1515.4899"
-   y="1101.0883">AFV GAZ-3344-20 &quot;Aleut&quot;</text><g
-   id="g881"
-   class="st0 st5 st7">
-		<rect
+   y="1101.0883">AFV GAZ-3344-20 &quot;Aleut&quot;</text><rect
    x="1168.7"
    y="831"
    class="st3"
    width="149"
    height="22.5"
-   id="rect873" />
-		<text
-   transform="translate(1176.3077,838.597)"
+   id="rect873" /><text
    id="text879"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#ff5e00;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"><tspan
-     x="0"
-     y="0"
+   class="st0 st5 st7"
+   x="1176.3077"
+   y="838.59698"><tspan
+     x="1176.3077"
+     y="838.59698"
      class="st0 st5 st7"
-     id="tspan875"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#ff5e00;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1">R-330BMV Borisoglebsk-2B </tspan></text>
-	</g><g
-   id="g891"
-   class="st0 st5 st7">
-		<rect
+     id="tspan875">R-330BMV Borisoglebsk-2B </tspan></text><rect
    x="1320.5"
    y="777.29999"
    class="st3"
    width="81.5"
    height="22.5"
-   id="rect883" />
-		<text
-   transform="translate(1320.4918,784.9486)"
-   id="text889"><tspan
-     x="0"
-     y="0"
+   id="rect883" /><text
+   id="text889"
+   class="st0 st5 st7"
+   x="1320.4918"
+   y="784.94861"><tspan
+     x="1320.4918"
+     y="784.94861"
      class="st0 st5 st7"
      id="tspan885"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#ff5e00;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1">Aircrafts Su-30SM</tspan></text>
-	</g><rect
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#ff5e00;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1">Aircrafts Su-30SM</tspan></text><rect
    x="1168.871"
    y="-102.60518"
    class="st3"
@@ -2398,7 +2393,7 @@
 		<text
    transform="translate(1216.1316,794.1189)"
    id="text909"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#ff5e00;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"><tspan
+   class="st0 st5 st7"><tspan
      sodipodi:role="line"
      id="tspan353991"
      x="0"
@@ -2585,11 +2580,11 @@
      id="tspan167783"
      x="1004.245"
      y="778.37604"
-     style="line-height:1.3;text-align:end;text-anchor:end">Unmanned Aerial </tspan><tspan
+     style="text-align:end;text-anchor:end">Unmanned Aerial </tspan><tspan
      sodipodi:role="line"
      x="1004.245"
      y="793.97601"
-     style="line-height:1.3;text-align:end;text-anchor:end"
+     style="text-align:end;text-anchor:end"
      id="tspan274244">Vehicles &quot;ZALA&quot;</tspan></text><rect
    x="1555.6"
    y="582.70001"
