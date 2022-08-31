@@ -1,0 +1,186 @@
+index,selector,name,short_name,id_number,director,img
+1,g297,"Unmanned Aerial Vehicles ""ZALA""",БПЛА «ZALA»,,,ZALA_421-16Е2_reconnaissance.jpg
+2,g531,120-mm mortar,120-мм міномет,,,120mm_2B11_2S12.png
+3,g541,"AFV ""Vityaz"" ",ДТ-30 «Вітязь» ,,,Vityaz_DT-30.jpg
+4,g557,"Tanks T-80UK, T-80UE-1, Т-80UM2, T-80BVM 
+","Танки Т-80УК, Т-80УЕ-1, Т-80УМ2, T-80БВМ 
+",,,T-80U.jpg
+5,g513,"Self-Propelled Artillery ""Msta-SM2"" 
+
+","САУ «МСТА-СМ2»
+",,,"Msta-SM2.jpg
+
+"
+6,g517,"Repairing ""Akatsiya"" ",Ремонт САУ «Акація»,,,"
+
+152mm_2S3(M)_Akatsiya.jpg"
+7,g463,Mi-28 transport helicopter,Вертольоти Мі-28,,,Mi-28_attack_helicopter.jpg
+8,g457,"Ka-52 ""Alligator"" attack helicopter",Вертольоти Ка-52,,,KA_52.jpg
+9,g439,Mi-35 attack helicopter,Вертольоти Мі-35,,,Mi-35M_attack_helicopter.jpg
+10,g449,Mi-8 transport helicopter,Вертольоти  Мі-8,,,Mi-8.jpg
+,g473,Mi-35 attack helicopter,Вертольоти  Мі-8,,,Mi-8.jpg
+11,g311,"Command post ""Krasukha-4""",Радар 1РЛ257 «Красуха-4»,,,1RL257_Krasukha-4_(command post).jpg
+12,g247,"Carriages for Surface-To-Air Missile Systems  ""Buk-M2""",Шасі до ЗРК «Бук-М2»,,,"Buk_M2.jpg
+
+"
+13,g251,"Carriages for Surface-To-Air Missile Systems ""Buk-M3""",Шасі до ЗРК «Бук-М3»,,,"
+Buk_M3.jpg"
+,g213,"Surface-To-Air Missile Systems ""Buk-M3""",ЗРК  «БУК-М3»,,,"
+Buk_M3.jpg"
+,g217,"Surface-To-Air Missile Systems ""Buk-M2""","ЗРК  «БУК-М2»
+
+",,,"Buk_M2.jpg
+
+"
+14,g199,"Surface-To-Air Missile Systems ""Tor-M2"" ",ЗРК «Тор» ,,,9K332_Tor-M2.jpg
+15,g203,"Rockets ""Kalibr""",Ракети «Калібр»,,,kalibr.jpg
+16,g231,"Radars ""SNAR-10M1""",Радари «СНАР-10м1»,,,"SNAR-10M1.jpg
+"
+17,g227,Zoopark-1M counter-battery radar complex,Радари «Зоопарк-1М»,,,"
+Zoopark-1M.jpg"
+18,g237,"Surface-To-Air Missile Systems ""Buk-M3""",ЗРК  «БУК-М3»,,,"Buk_M3.jpg
+"
+19,g241,"Surface-To-Air Missile Systems ""Buk-M2""","ЗРК  «БУК-М2»
+
+",,,Buk_M2.jpg
+20,g221,"Surface-To-Air Missile Systems ""Tunguska""",ЗРПК «Тунгуска-М1»,,,"
+2K22M1_Tunguska.jpg"
+21,g71,"Rocket ""Tochka-U""",Точка-У,,,Tochka.jpg
+22,g339,"TOS-1A ""Solntsepek""",ТОС-1А (Сонцепьок),,,220mm_TOS-1A.jpg
+23,g505,"Rockets ""Iskander"" ",Ракети «Іскандер»,,,iskander.jpg
+24,g367,"ATGM ""Kornet-T""
+","ПТРК «Корнет»
+",,,"
+Kornet.jpg"
+25,g363,"Surface-To-Air Missile Systems ""Pantsir-S1""",ЗРК «Панцир-С1»,,,"Pantsir_S1.jpg
+"
+26,g487,"SAM ""Strela-10""",ЗРК «Стрела-10»,,,9K35_Strela-10.jpg
+27,g375,IFV BMP-3,БМП-4,,,"
+BMP-3.jpg"
+28,g379,"APC ""BTR-MDM 'Rakushka""",БТР-МДМ «Ракушка»,,,BTR-MDM__Rakushka_.jpg
+29,g163,"Trucks, Vehicles and Jeeps",Вантажівки та джипи,,,"Ural.jpg
+
+"
+30,g353,R-149MA1 command and staff vehicle ,"КШМ Р-149МА1
+
+",,,R-149MA1_command_and_staff_vehicle.png
+31,g357,R-330BMV Borisoglebsk-2B ,Комплекс РЕБ «Борисоглебск-2В» ,,,Borisoglebsk-2B.png
+32,g53,Takhion reconnaissance UAV,БПЛА «Тахіон»,,,Takhion_reconnaissance_UAV.png
+33,g321,Infantry Fighting Vehicles BMD-4M,БМД-4М,,,50_BMD-4M.jpg
+34,g39,"Jammer And Deception System ""Rtut-BM""",Радари «Ртуть БМ»,,,Rtut BM.jpg
+35,g151,MRAP KamAZ-63968 «Typhoon»,MRAP КамАЗ-63968 «Тайфун»,,,"KamAZ-63968_Typhoon.jpg
+"
+36,g147,"MRAP K-53949 ""Typhoon-K""",MRAP K-53949 «Тайфун-К»,,,K-53949_Typhoon-K.jpg
+37,g143,"MRAP K-53949 ""Linza"" ",MRAP K-53949 «Лінза»,,,K53949Linza.jpg
+38,g415,Aircrafts Su-30SM,Літаки Су-30,,,Su-30SM_multirole_aircraft.jpg
+39,g411,Aircrafts Su-34 ,Літаки Су-34,,,Su-34_strike_aircraft.jpg
+40,g397,"Self-Propelled Artillery ""Khosta""",САУ «Хоста»,,,120mm_2S34_Khosta.jpg
+41,g393,"Multiple Rocket Launchers ""Tornado""",РСЗВ «Торнадо»,,,"
+122mm_2B17_Tornado-G.jpg"
+42,g389,"Multiple Rocket Launchers ""Grad""",РСЗВ «Град»,,,122mm_BM-21_Grad.jpg
+43,g1035,BTR-82A,БТР-82,,,"
+
+BTR_82.png
+
+"
+44,g1039,Armoured Fighting Vehicles GAZ Tigr,ГАЗ Тигр,,,"GAZ_Tigr.jpg
+
+"
+45,g1049,Armoured Fighting Vehicles GAZ Tigr-M,ГАЗ Тигр-М,,,"
+GAZ_Tigr-M.jpg"
+46,g1045,BREM-K,БРЕМ-К,,,"
+BREM-K.jpg"
+47,g995,Trucks,Вантажівки,,,GAZ-3308.jpg
+,g999,Armoured Fighting Vehicles GAZ Tigr,ГАЗ Тигр,,,"GAZ_Tigr.jpg
+"
+,g1003,Armoured Fighting Vehicles GAZ Tigr-M,ГАЗ Тигр-М,,,"
+GAZ_Tigr-M.jpg"
+48,g167,"Armoured Fighting Vehicles GAZ-3344-20 ""Aleut""",ГАЗ-3344-20 «Алеут»,,,GAZ-3344-20_Aleut.jpg
+49,circle23,Jammer And Deception System R-330ZH Zhitel,Радар Р-330Ж «Житель»,,,R-330ZH Zhitel.jpg
+50,g6778,Eleron-3 reconnaissance UAV,БПЛА «Елерон»,,,Eleron-3_reconnaissance_UAV.jpg
+51,g6768,RKhM-6 Povozka ,Інженерні машини РХМ-6 Повозка,,,RKhM-6_Povozka.jpg
+52,circle87,APE-5 command post,Командні пункти APE-5,,,APE-5_command_post.jpg
+53,g119,Project 03160 Raptor class patrol boat,Патрульні катери проєкту 03160,,,Project_03160_Raptor_class_patrol_boat.jpg
+54,g79,Orlan-10 reconnaissance UAV,БПЛА «Орлан»,,,Orlan-10_reconnaissance_UAV.jpg
+55,g9,Project 11770 Serna class landing craft,Десантні катери проєкту 11771,,,Project_11770_Serna_class_landing_craft.png
+,g129,Project 11770  Serna class landing craft,Десантні катери проєкту 11771,,,Project_11770_Serna_class_landing_craft.png
+56,g293,"LTD ""CST""",Cst,1841015504,Zaharov Aleksandr Vyacheslavovich,ZAHAROV_ALEKSANDR_V.jpg
+57,g527,"JSC ""CENTRAL RESEARCH INSTITUTE ""BUREVESTNIK""",Burevestnik,5259075468,"Zakamennyh Georgij Ivanovich
+",ZAKAMENNYH_GEORGIJ.jpg 
+58,g537,"JSC ""MACHINE BUILDING COMPANY ""VITYAZ""",Vityaz,0261013879,Arslanov Irek Nailovich,ARSLANOV_IREK.jpg
+59,g553,"JSC ""OMSKIJ ZAVOD TRANSPORTNOGO MASHINOSTROENIYA""",Omsktransmash,5505204171,"Lobov Igor Eduardovich
+",LOBOV_IGOR.jpg
+60,g549,"JSC ""URALSKIJ ZAVOD TRANSPORTNOGO MASHINOSTROENIYA""",Uraltransmash,6659190900,"Semizorov Dmitrij Yurevich
+",SEMIZOROV_DMITRIJ.jpg
+61,g445,"JSC ""KAZANSKIJ VERTOLETNYJ ZAVOD""",Kazanskij Vertoletnyj Zavod,1656002652,Ginsburg Vladimir Srulevich,GINSBURG_Vladimir.jpg
+62,g469,"JSC ""ULAN-UDENSKIJ AVIACIONNYJ ZAVOD""
+",Ulan-Udenskij Aviacionnyj Zavod,0323018510,Kozlov Aleksej Vladimirovich,KOZLOV_ALEKSEJ.jpg
+63,g573,"JSC ""NATIONAL HELICOPTER BUILDING CENTER NAMED AFTER M.L. MIL AND N.I. KAMOV""",National Helicopter Center Mil And Kamov,7718016666,Korotkevich Mihail Zaharovich,KOROTKEVICH_Mikhail.jpg
+64,g453,"JSC ""ARSENIEV AVIATION COMPANY ""PROGRESS"" NAMED AFTER N.I. SAZYKIN""",Progress,2501002394,Palcev Denis Evgenevich,PALCEV_DENIS.jpg 
+65,g435,"ROSTOV HELICOPTER PRODUCTION COMPLEX PJSC ""ROSTVERTOL"" NAMED AFTER B.N.SLYUSARY",Rostvertol,6161021690,Motrenko Petr Danilovich,MOTRENKO_PETR.jpg
+66,g307,"JSC ""BRYANSKIJ ELEKTROMEHANICHESKIJ ZAVOD""",Bryanskij Elektromehanicheskij Zavod,3255517577,Zrelov Leonid Viktorovich,no_photo.png
+67,g255,"JSC ""BRYANSKIJ AVTOMOBILNYJ ZAVOD""",Bryanskij Avtomobilnyj Zavod,3255502838,Sdobnov Aleksej Borisovich,no_photo.png
+68,g259,"JSC ""NAUCHNO-ISSLEDOVATELSKIJ INSTITUT PRIBOROSTROENIYA NAMED AFTER V.V. TIKHOMIROV""",Institut Priborostroeniya Named After V.V. Tikhomirov,5013045054,Medunitsin Nikolai Borisovich,MEDUNITSIN_Nikolai.jpg
+69,g263,"JSC ""IZHEVSK ELECTROMECHANICAL PLANT ""KUPOL""",Kupol,1831083343,Ziyatdinov Fanil Gazisovich,ZIYATDINOV_Fanil.jpg
+70,g271,"JSC ""RESEARCH DESIGN BYURO ""NOVATOR""",Novator,6673092045,Abdrakhmanov Faryd Khabybullovych,ABDRAKHMANOV_Faryd.jpg
+71,g267,"PJSC ""SCIENTIFIC AND PRODUCTION ASSOCIATION ""STRELA""",Strela,7103028233,Chapkin Vyacheslav Vyacheslavovich,CHAPKIN_Vyacheslav.jpg
+73,g275,"JSC ""ULYANOVSKIJ MEHANICHESKIJ ZAVOD""",Ulyanovskij Mehanicheskij Zavod,7303026762,Lapin Vyacheslav Viktorovich,LAPIN_Vyacheslav.jpg
+74,g67,"JSC ""VOTKINSKYI ZAVOD""",Votkinskyi Zavod,1828020110,Churbanov Igor Yurievich,CHURBANOV_Igor.jpg
+75,g335,"JSC ""SCIENTIFIC AND PRODUCTION ASSOCIATION ""SPLAV"" NAMED AFTER A.N. GANICHEV""",Splav,7105515987,Smirnov Alexander Vladimirovich,SMIRNOV_Alexander.jpg
+76,g501,"JSC ""RESEARCH AND PRODUCTION CORPORATION
+""KONSTRUKTORSKOYE BYURO MASHYNOSTROYENIYA""",Konstruktorskoye Byuro Mashynostroyeniya,5022039177,Pitikov Sergej Viktorovich,PITIKOV_Sergey.jpg
+77,g497,"JSC ""INSTRUMENT DESIGN BYURO NAMED AFTER ACADEMIC A. G. SHIPUNOV""",Konstruktorskoe Byuro Priborostroeniya,7105514574,Konoplev Dmitrij Vladimirovich Before 22.07.2022,Konoplev_Dmitrij.jpg
+78,g483,"JSC ""DESIGN BYURO OF PRECISION ENGINEERING NAMED AFTER A.E. NUDELMAN""",Konstruktorskoe Byuro Tochnogo Mashinostroeniya,7728789425,Ibragimov Dmitrij Maratovich,IBRAGIMOV_DMITRIJ.jpg
+79,g493,"PJSC ""KURGANSKIJ MASHINOSTROITELNYJ ZAVOD""",Kurganmashzavod,4501008142,Tyukov Petr Aleksandrovich,Tyukov_Petr.jpg
+80,g171,"JSC ""AVTOMOBILNIJ ZAVOD ""URAL""","Avtomobilnij Zavod ""Ural""",7415029289,Yakovlev Pavel Aleksandrovich,Yakovlev_Pavel.jpg
+81,g589,"JSC ""CONCERN ""SOZVEZDIE""",Sozvezdie,3666127502,Artemov Mihail Leonidovich,ARTEMOV_MIHAIL.jpg
+82,g49,"Ltd ""SCIENTIFIC AND PRODUCTION ASSOCIATION ""IZHEVSKIE BESPILOTNYE SISTEMY""",Zhevskie Bespilotnye Sistemy,1831117433,Zorin Andrej Vasilevich,ZORIN_Andrey.jpeg
+83,g317,"Ltd ""VOLGOGRAD MACHINE-BUILDING COMPANY ""VGTZ""",Volgograd Machine-Building Company ,3441023695,Bolotin Mihail Grigorevich,Bolotin_Mihail.jpg
+84,g593,"JSC ""REMDYZEL""",Remdyzel,1650004741,Zaharov Aleksandr Vladimirovich,ZAHAROV_ALEKSANDR_V.jpg
+85,g35,"JSC ""KAZANSKIJ OPTIKO-MEHANICHESKIJ ZAVOD""",Kazanskij Optiko-Mehanicheskij Zavod,1660004229,Maksimov Vadim Valerevich,MAKSIMOV_VADIM.jpg
+86,g423,"BRANCH OF THE JSC ""AVIATION HOLDING COMPANY ""SUKHOI"" - KOMSOMOLSKY-ON-AMUR AVIATION PLANT NAMED AFTER YU.A. GAGARIN",Komsomolsky-On-Amur Aviation Plant,7740000090,Pekarsh Aleksandr Ivanovich,PEKARSH_ALEKSANDR.jpg
+87,g419,"BRANCH OF THE JSC ""AVIATION HOLDING COMPANY ""SUKHOI"" - ""NOVOSIBIRSK AVIATION PLANT NAMED V.P. CHKALOV""",Novosibirsk Aviation Plant,7740000090,Smirnov Sergej Aleksandrovich,SMIRNOV_Sergej.jpg
+88,g405,"CJSC ""SPECIALNOE KONSTRUKTORSKOE BYURO""","Specialnoe Konstruktorskoe Byuro
+",5906034720,Kalinin Viktor Alexandrovich,KALININ_Viktor.jpg
+89,g1053,"JSC ""ARZAMASSKIJ MASHINOSTROITELNYJ ZAVOD""",Arzamasskij Mashinostroitelnyj Zavod,5243001767,Krasovitsky Alexander Vladimirovich,KRASOVITSKY_Alexander.jpg
+90,g1027,"Ltd ""KOMMERCHESKIE AVTOMOBILI - GRUPPA GAZ""",Gruppa Gaz,5256051148,Sorokin Vadim Nikolaevich,SOROKIN_VADIM.jpeg
+91,g175,"CJSC ""ZAVOLZHSKIJ ZAVOD GUSENICHNYH TYAGACHEJ""",Zavolzhskij Zavod Gusenichnyh Tyagachej,5248031980,Zhunin Mihail Vladimirovich,no_photo.png
+92,g21,"JSC SCIENTIFIC AND INTRODUCTION ENTERPRISE ""PROTEK""",Protek,3665017521,Shuvaev Vladimir Andreevich,no_photo.png
+93,g6783,"CJSC ""ENIKS""",Eniks,1661009974,Pobezhimov Valerij Nikolaevich,POBEZHIMOV_VALERIJ.jpg
+94,g6773,"PJSC ""ZAVOD TULA""",Zavod Tula,7104002862,Buhal Viktor Mihajlovich,no_photo.png
+95,g6748,"JSC ""NAUCHNO-PROIZVODSTVENNOE OBEDINENIE RUSSKIE BAZOVYE INFORMACIONNYE TEHNOLOGII""",Russkie Bazovye Informacionnye Tehnologii,7726604816,Kabankov Pavel Yurevich,no_photo.png
+96,g44743,"JSC ""LENINGRADSKIJ SUDOSTROITELNYJ ZAVOD ""PELLA""",Pella,4706000296,Caturov Garegin Gerbertovich,CATUROV_GAREGIN.jpg
+97,g44751,"Ltd ""SPECIALNYJ TEHNOLOGICHESKIJ CENTR""",Special Technological Center Ltd,7802170553,Agafonnikov Roman Dmitrievich,no_photo.png
+98,g6806,"JSC ""VOSTOCHNAIA VERF""",Vostochnaia Verf,2537009643,Zubakhin Oleg Viktorovich,ZUBAKHIN_Oleg.jpg
+99,g597,"Central Design 
+Bureau named after 
+R.E. Alekseev","Central Design 
+Bureau Named After 
+R.E. Alekseev",5263001420 ,Italiansev Sergeii Anatolievich,ITALIANSEV_Sergeii.jpg
+100,g289,"JSC ""KALASHNIKOV CONCERN"" ",Kalashnikov ,1832090230,Lepin Vladimir Nikolaevich,LEPIN_Vladimir.jpg
+101,g577,"JSC ""KONCERN ""URALVAGONZAVOD""",Uralvagonzavod,7706453206,Potapov Aleksandr Valerievich,POTAPOV_Aleksandr.jpg
+102,g569,"JSC ""VERTOLETY ROSSII""",Vertolety Rossii,7731559044,Kolesov Nykolai Aleksandrovych,KOLESOV_Nykolai.jpg
+103,g303,RADIO ELECTRONIC TECHNOLOGY CONCERN JSC,Radio Electronic Technology ,7703695246,Pan Oleksandr Volodimirovich,PAN_Aleksandr.jpeg
+104,g195,"JSC ""AIRCRAFT DEFENSE CONCERN ""ALMAZ-ANTEI""",Almaz-Antei,7731084175,Novikov Yan Valentinovich,NOVIKOV_Yan.jpg
+105,g63,"JSC CORPOTARION ""MOSKOVSKIJ INSTITUT TEPLOTEHNIKI""",Moskovskij Institut Teplotehniki,7715842760,Ponomarev Sergey Alekseevich,no_photo.png
+106,g331,"JSC ""SCIENTIFIC AND PRODUCTION CONCERN ""TEHNOLOGII MASHINOSTROENIYA""",Tehnologii Mashinostroeniya,7743813961,Kochkin Alexander Viktorovich,KOCHKIN_Alexander.jpg
+107,g585,"JSC RESEARCH AND PRODUCTION ASSOCIATION ""VYSOKOTOCHNYE KOMPLEKSY""",Vysokotochnye Kompleksy,7704721192,Denisov Alexander Vladimirovich,DENISOV_Alexander.jpg
+109,g347,"JSC ""OBEDINENNAYA PRIBOROSTROITELNAYA KORPORACIYA""",Obedinennaya Priborostroitelnaya Korporaciya,7704859803,Sakhnenko Sergey Stepanovich,SAKHNENKO_Sergey.jpg
+110,g45,"JSC ""RS-LIZING""",Rs-Lizing,1832003703,Zorin Andrey Vasilyevich,ZORIN_Andrey.jpeg
+112,g6788,"PJSC ""KAMAZ""",Kamaz,1650032058,Kogogin Sergey Anatolyevich,KOGOGIN_Sergey.jpg
+113,g31,MINISTRY OF LAND AND PROPERTY OF THE REPUBLIC OF TATARSTAN,Ministry Of Land And Property Of The Republic Of Tatarstan,1655043430,Agliullin Fanil Anvarovich,AGLIULLIN_Fanil.jpg
+114,g581,"JSC ""OBEDINENNAYA AVIASTROITELNAYA KORPORACIYA""",Obedinennaya Aviastroitelnaya Korporaciya,7708619320,Slyusar Yury Borisovich,SLYUSAR_Yury.jpg
+115,g401,"PJSC SPECIAL MECHANICAL BUILDING AND METALLURGY ""MOTOVILIHINSKIE ZAVODY""",Motovilihinskie Zavody,5906009273,Bersenev Andrej Aleksandrovich,no_photo.png
+116,g1023,"LTD ""VOENNO-PROMYSHLENNAYA KOMPANIYA""",Voenno-Promyshlennaya Kompaniya,7703602065,Krasovitsky Alexander Vladimirovich,KRASOVITSKY_Alexander.jpg
+117,g1019,"""GROUP GAZ"" MANAGEMENT COMPANY LTD",Group Gaz,7730522644,Zolotarev Aleksandr Vasilevich,no_photo.png
+118,g179,"LTD ""RM - TEREKS""",Rm - Tereks,7707533574,Galkovskij Evgenij Mihajlovich,no_photo.png
+119,g17,"LTD ""EGO-HOLDING'",Ego-Holding,7804070635,Cvetkova Irina Lvivna,no_photo.png
+120,g44797,FEDERAL AGENCY FOR STATE PROPERTY MANAGEMENT,Rosimushhestvo,7710723134,Yakovenko Vadim Vladimirovich,YAKOVENKO_Vadim.jfif
+121,g29224,"STATE CORPORATION FOR SPACE ACTIVITIES ""ROSKOSMOS""",Roskosmos,7702388027,Rogozin Dmitry Olegovich Before 15.07.2022,ROGOZIN_Dmitry.jpg
+122,g327,"JSC ""TEHNODINAMIKA"" ",Tehnodinamika,7719265496,Nasenkov Igor Georgievich,NASENKOV_Igor.jpg
+123,g565,"JSC ""OBEDINENNAYA MASHINOSTROITELNAYA GRUPPA""",Obedinennaya Mashinostroitelnaya Gruppa,7722470978,Strezhnev Dmitry Stepanovich,STREZHNEV_Dmitry.jpg
+124,g561,"LTD ""RT-KAPITAL""",Rt-Kapital,7704770859,Yakubov Semen Valerevich,YAKUBOV_SEMEN.png
+125,g1015,"LTD ""GRUPPA IMPULS""",Gruppa Impuls,7707199873,Pechenkin Valerij Pavlovich,no_photo.png
+126,g44802,"STATE CORPORATION ""ROSTEH""",Rosteh,7704274402,Chemezov Sergey Viktorovich,CHEMEZOV_Sergey.jpg
+127,g1057,DERIPASKA OLEG VLADIMIROVICH,Deripaska Oleg Vladimirovich,,Deripaska Oleg Vladimirovich,DERIPASKA_Oleg.jpg
+128,g157,MIDSTREAM GROUP LIMITED ,Midstream Group Limited ,ΗΕ351903,,
